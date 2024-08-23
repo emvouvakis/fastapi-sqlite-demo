@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Item Management</h1>
+
+        <form id="item-form">
+ 
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="tax">Tax:</label>
+                <input type="number" id="tax" name="tax" value="0">
+            </div>
+            <button type="submit">Submit Item</button>
+        </form>
+
+        <!-- Display Items -->
+        <h2>Items List</h2>
+        <table id="items-table">
+            <thead>
+                <tr>
+                    <th>#</th> <!-- Select All Checkbox -->
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Tax</th>
+                </tr>
+            <tbody>
+                <!-- Items will be dynamically inserted here -->
+            </tbody>
+            
+        </table>
+        <button id="delete-selected">Delete Selected</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
