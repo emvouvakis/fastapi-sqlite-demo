@@ -16,7 +16,7 @@ Getting Started
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/item-management-system.git
+git clone https://github.com/emvouvakis/fastapi-sqlite-demo.git
 ```
 
 2. **Install Dependencies**
