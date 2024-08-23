@@ -120,7 +120,7 @@ async def get_all_items(db: Session = Depends(get_db)):
         items = db.query(ItemInDB).all()
         return [{"item_id": item.id, "item": item} for item in items]
 
-    except:
+    except Exception as e:
         # Log general errors
         logger.error(f"Unexpected error while getting all items: {e}")
 
@@ -142,7 +142,7 @@ async def create_item(item: Item, db: Session = Depends(get_db)):
 
     except Exception as e:
         # Log general errors
-        logger.error(f"Unexpected error while inserting item with ID {item_id}: {e}")
+        logger.error(f"Unexpected error while inserting item with ID {db_item.id}: {e}")
         db.rollback()
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
